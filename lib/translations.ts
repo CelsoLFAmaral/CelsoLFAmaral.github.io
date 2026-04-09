@@ -11,7 +11,7 @@ export const t = {
     },
     hero: {
       title: 'Desenvolvedor Full Stack',
-      bio: 'Desenvolvedor Full Stack com 7+ anos de experiência construindo plataformas web escaláveis — de e-learning e sistemas de gestão a sites corporativos de alta performance. Experiência sólida com React, Node.js e Firebase no lado de produto, e com WordPress, PHP e integrações de CRM no universo de agência e freela. Interfaces desenvolvidas com abordagem Mobile First, foco em performance e SEO.',
+      bio: 'Desenvolvedor Full Stack com 7+ anos de experiência em plataformas web e mobile escaláveis — de e-learning e aplicativos de vídeo a sistemas corporativos de alta performance. Atuação full-stack de ponta a ponta com React, React Native, Node.js e Firebase, com foco em arquitetura de serviços e performance em produção. Background complementar em WordPress, PHP e integrações de CRM.',
       scrollLabel: 'Portfólio',
     },
     sections: {
@@ -115,7 +115,7 @@ export const t = {
     },
     hero: {
       title: 'Full Stack Developer',
-      bio: 'Full Stack Developer with 7+ years of experience building scalable web platforms — from e-learning and management systems to high-performance corporate websites. Solid expertise with React, Node.js, and Firebase on the product side, and WordPress, PHP, and CRM integrations on the agency and freelance side. Interfaces built with a Mobile First approach, with focus on performance and SEO.',
+      bio: 'Full Stack Developer with 7+ years of experience in scalable web and mobile platforms — from e-learning and video apps to high-performance corporate systems. End-to-end full-stack work with React, React Native, Node.js, and Firebase, focused on service architecture and production performance. Complementary background in WordPress, PHP, and CRM integrations.',
       scrollLabel: 'Portfolio',
     },
     sections: {

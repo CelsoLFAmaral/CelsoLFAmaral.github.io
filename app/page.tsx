@@ -181,7 +181,7 @@ export default function Portfolio() {
 
       {/* HERO */}
       <section id="sobre" className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 max-w-6xl mx-auto">
-        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full opacity-[0.04] blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }} />
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full opacity-[0.04] blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #00ffe1 0%, transparent 70%)' }} />
 
         <div className="animate-fade-in">
           <div className="flex items-center gap-3 mb-8 opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
@@ -201,10 +201,10 @@ export default function Portfolio() {
                   animationFillMode: 'forwards',
                   animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
                   color: i === 2 ? 'transparent' : '#e8e4dc',
-                  WebkitTextStroke: i === 2 ? '1px #c9a84c' : undefined,
+                  WebkitTextStroke: i === 2 ? '1px #00ffe1' : undefined,
                 }}
               >
-                {line}
+                {i === 0 ? <span className="glitch" style={{ animationDuration: '6s' }}>{line}</span> : i === 1 ? <span className="glitch" style={{ animationDuration: '7s', animationDelay: '2.5s' }}>{line}</span> : <span className="neon-pulse" style={{ animationDelay: '1s' }}>{line}</span>}
               </h1>
             ))}
           </div>
@@ -290,7 +290,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-3 gap-4">
             {tr.education.map((edu, i) => (
               <div key={i} className="border border-border rounded-sm p-6 bg-surface card-hover relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, #c9a84c, transparent)' }} />
+                <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, #00ffe1, transparent)' }} />
                 <p className="font-mono text-xs text-text-muted mb-3">{edu.period}</p>
                 <h3 className="font-display font-bold text-lg text-text-primary leading-tight mb-1">{edu.course}</h3>
                 <p className="font-sans text-xs text-accent mb-3">{edu.detail}</p>

@@ -22,9 +22,9 @@ const config: Config = {
         'text-primary': '#e8e4dc',
         'text-muted': '#5a5a5a',
         accent: {
-          DEFAULT: '#c9a84c',
-          light: '#e8c97a',
-          dim: '#c9a84c26',
+          DEFAULT: '#00ffe1',   /* was: #c9a84c */
+          light: '#7fffef',     /* was: #e8c97a */
+          dim: '#00ffe114',     /* was: #c9a84c26 */
         },
       },
       keyframes: {
