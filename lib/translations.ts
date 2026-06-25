@@ -68,6 +68,12 @@ export const t = {
     ],
     education: [
       {
+        course: 'Bacharelado em Engenharia de Software',
+        detail: 'Em andamento',
+        institution: 'Uninter',
+        period: '2026 — Presente',
+      },
+      {
         course: 'Informática com ênfase em Programação',
         detail: 'Centro Paula Souza',
         institution: 'Centro Paula Souza',
@@ -171,6 +177,12 @@ export const t = {
       },
     ],
     education: [
+      {
+        course: 'Bachelor in Software Engineering',
+        detail: 'In progress',
+        institution: 'Uninter',
+        period: '2026 — Present',
+      },
       {
         course: 'Computer Science — Programming',
         detail: 'Centro Paula Souza',
