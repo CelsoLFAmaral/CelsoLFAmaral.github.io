@@ -11,7 +11,7 @@ export const t = {
     },
     hero: {
       title: 'Desenvolvedor Full Stack',
-      bio: 'Desenvolvedor Full Stack com 7+ anos de experiência em plataformas web e mobile escaláveis — de e-learning e aplicativos de vídeo a sistemas corporativos de alta performance. Atuação full-stack de ponta a ponta com React, React Native, Node.js e Firebase, com foco em arquitetura de serviços e performance em produção. Background complementar em WordPress, PHP e integrações de CRM.',
+      bio: 'Desenvolvedor Full Stack com 7+ anos de experiência em plataformas web e mobile escaláveis — de e-learning e aplicativos de vídeo a sistemas corporativos de alta performance. Atuação full-stack de ponta a ponta com React, Next.js, Node.js e Laravel, com foco em arquitetura de serviços e performance em produção. Desenvolvimento assistido por IA no dia a dia, com harness próprio de skills, subagentes e hooks para orquestrar fluxos multiagente.',
       scrollLabel: 'Portfólio',
     },
     sections: {
@@ -23,6 +23,8 @@ export const t = {
     ui: {
       present: 'Presente',
       viewProject: 'Ver projeto',
+      downloadCv: 'Baixar currículo',
+      cvFile: '/cv/Celso_Ferraz_FullStack_2026.pdf',
       inProgress: 'Em andamento',
     },
     skillGroups: ['Frontend', 'Backend', 'Banco de Dados', 'CMS', 'Integrações', 'Ferramentas', 'IA', 'Idiomas'],
@@ -37,7 +39,8 @@ export const t = {
           'Desenvolvimento e manutenção de plataforma e-learning com mais de 3.000 usuários ativos, garantindo escalabilidade e eficiência.',
           'Suporte a aplicativo de vídeos curtos, implementando novas funcionalidades e correções.',
           'Colaboração com times de design, marketing e produto para alinhar requisitos técnicos e de negócio.',
-          'Uso de ferramentas de IA para acelerar desenvolvimento e entregas.',
+          'Novo site institucional em React + Supabase, com captura de leads integrada ao RD Station e ao Apollo via API REST.',
+          'Uso de Claude Code, Cursor e Lovable para acelerar desenvolvimento, refatoração e testes.',
         ],
       },
       {
@@ -46,11 +49,11 @@ export const t = {
         companyFull: '',
         period: '2019 — Presente',
         items: [
-          '80+ projetos entregues entre landing pages e sites institucionais para empresas de diversos segmentos.',
-          'Criação de landing pages de alta conversão com foco em performance e SEO.',
-          'Implementação de temas e plugins customizados.',
-          'Integrações com CRMs (HubSpot, RD Station, Omie) e meios de pagamento (PagSeguro, DocSign).',
-          'Uso de ferramentas de IA para acelerar desenvolvimento e entregas.',
+          '80+ projetos entregues entre sistemas web, sites institucionais e landing pages para empresas de diversos segmentos.',
+          'Delas Network: plataforma de gestão de influenciadoras e diretório de fornecedores em Laravel, React + TypeScript e PostgreSQL.',
+          'Alucinados por Guitarra: marketplace de instrumentos e cursos em Next.js, Payload CMS e PostgreSQL.',
+          'Integrações com CRMs e APIs (HubSpot, RD Station, Apollo, Omie) e meios de pagamento (PagSeguro, DocSign).',
+          'Temas e plugins WordPress customizados com foco em performance e SEO.',
         ],
       },
       {
@@ -82,6 +85,14 @@ export const t = {
     ],
     portfolio: [
       {
+        title: 'Delas Network',
+        description: 'Plataforma de cadastro e gestão de influenciadoras, marcas, agências e eventos, com o Creators Crew: diretório curado de fornecedores com cadastro em etapas e aprovação manual.',
+      },
+      {
+        title: 'Alucinados por Guitarra',
+        description: 'Marketplace de instrumentos musicais, cursos e serviços de luthier, com busca e filtros, painel de anunciantes e negociação via WhatsApp.',
+      },
+      {
         title: 'SuperApp Escola do Caos',
         description: 'Plataforma e-learning desenvolvida em equipe com painel administrativo completo — gerenciamento de usuários, vídeos, landing pages de cursos, player SCORM e controle de acesso. Inclui administração do aplicativo mobile da escola.',
       },
@@ -99,7 +110,7 @@ export const t = {
       },
       {
         title: 'Escola do Caos',
-        description: 'Site institucional com foco em cultura, liderança e aprendizagem corporativa.',
+        description: 'Site institucional com foco em cultura, liderança e aprendizagem corporativa, com captura de leads integrada ao RD Station e ao Apollo via API REST.',
       },
       {
         title: 'CONSAG Engenharia',
@@ -121,7 +132,7 @@ export const t = {
     },
     hero: {
       title: 'Full Stack Developer',
-      bio: 'Full Stack Developer with 7+ years of experience in scalable web and mobile platforms — from e-learning and video apps to high-performance corporate systems. End-to-end full-stack work with React, React Native, Node.js, and Firebase, focused on service architecture and production performance. Complementary background in WordPress, PHP, and CRM integrations.',
+      bio: 'Full Stack Developer with 7+ years of experience in scalable web and mobile platforms — from e-learning and video apps to high-performance corporate systems. End-to-end full-stack work with React, Next.js, Node.js, and Laravel, focused on service architecture and production performance. AI-assisted development as a daily practice, with a personal harness of skills, subagents, and hooks to orchestrate multi-agent workflows.',
       scrollLabel: 'Portfolio',
     },
     sections: {
@@ -133,6 +144,8 @@ export const t = {
     ui: {
       present: 'Present',
       viewProject: 'View project',
+      downloadCv: 'Download résumé',
+      cvFile: '/cv/Celso_Ferraz_FullStack_Engineer_2026.pdf',
       inProgress: 'In progress',
     },
     skillGroups: ['Frontend', 'Backend', 'Database', 'CMS', 'Integrations', 'Tools', 'AI', 'Languages'],
@@ -147,7 +160,8 @@ export const t = {
           'Developed and maintained an e-learning platform with 3,000+ active users, ensuring scalability and efficiency.',
           'Supported a short-video mobile app, implementing new features and bug fixes.',
           'Collaborated with design, marketing, and product teams to align technical and business requirements.',
-          'Used AI tools to accelerate development and delivery.',
+          'Built the new institutional website with React + Supabase, with lead capture integrated with RD Station and Apollo via REST API.',
+          'Used Claude Code, Cursor, and Lovable to accelerate development, refactoring, and testing.',
         ],
       },
       {
@@ -156,11 +170,11 @@ export const t = {
         companyFull: '',
         period: '2019 — Present',
         items: [
-          '80+ projects delivered including landing pages and institutional websites across various industries.',
-          'Created high-conversion landing pages focused on performance and SEO.',
-          'Implemented custom themes and plugins.',
-          'Integrated CRMs (HubSpot, RD Station, Omie) and payment gateways (PagSeguro, DocSign).',
-          'Used AI tools to accelerate development and delivery.',
+          '80+ projects delivered including web systems, institutional websites, and landing pages across various industries.',
+          'Delas Network: influencer management platform and supplier directory built with Laravel, React + TypeScript, and PostgreSQL.',
+          'Alucinados por Guitarra: marketplace for instruments and courses built with Next.js, Payload CMS, and PostgreSQL.',
+          'Integrated CRMs and APIs (HubSpot, RD Station, Apollo, Omie) and payment gateways (PagSeguro, DocSign).',
+          'Custom WordPress themes and plugins focused on performance and SEO.',
         ],
       },
       {
@@ -192,6 +206,14 @@ export const t = {
     ],
     portfolio: [
       {
+        title: 'Delas Network',
+        description: 'Platform for registering and managing influencers, brands, agencies and events, including Creators Crew: a curated supplier directory with multi-step sign-up and manual approval.',
+      },
+      {
+        title: 'Alucinados por Guitarra',
+        description: 'Marketplace for musical instruments, courses and luthier services, with search and filters, an advertiser dashboard and deals closed via WhatsApp.',
+      },
+      {
         title: 'SuperApp Escola do Caos',
         description: 'E-learning platform built with a team, featuring a full admin panel — user management, videos, course landing pages, SCORM player, and access control. Includes administration of the school\'s mobile app.',
       },
@@ -209,7 +231,7 @@ export const t = {
       },
       {
         title: 'Escola do Caos',
-        description: 'Institutional website focused on corporate culture, leadership, and learning.',
+        description: 'Institutional website focused on corporate culture, leadership, and learning, with lead capture integrated with RD Station and Apollo via REST API.',
       },
       {
         title: 'CONSAG Engenharia',
