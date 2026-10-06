@@ -25,6 +25,12 @@ import {
   Users,
   Wind,
   FileCode,
+  Bot,
+  Workflow,
+  Plug,
+  Sparkles,
+  Container,
+  Download,
 } from 'lucide-react'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
@@ -40,6 +46,7 @@ const contact = {
 const skills = [
   // Frontend — do mais complexo ao mais básico
   { label: 'React', icon: Atom, group: { pt: 'Frontend', en: 'Frontend' } },
+  { label: 'Next.js', icon: Atom, group: { pt: 'Frontend', en: 'Frontend' } },
   { label: 'TypeScript', icon: FileCode, group: { pt: 'Frontend', en: 'Frontend' } },
   { label: 'React Native', icon: Smartphone, group: { pt: 'Frontend', en: 'Frontend' } },
   { label: 'JavaScript', icon: Terminal, group: { pt: 'Frontend', en: 'Frontend' } },
@@ -50,10 +57,13 @@ const skills = [
   // Backend
   { label: 'Node.js', icon: Server, group: { pt: 'Backend', en: 'Backend' } },
   { label: 'Express', icon: Server, group: { pt: 'Backend', en: 'Backend' } },
+  { label: 'Laravel', icon: Server, group: { pt: 'Backend', en: 'Backend' } },
   { label: 'PHP', icon: FileCode, group: { pt: 'Backend', en: 'Backend' } },
   { label: 'Firestore', icon: Flame, group: { pt: 'Backend', en: 'Backend' } },
+  { label: 'Supabase', icon: Database, group: { pt: 'Backend', en: 'Backend' } },
   { label: 'REST API', icon: ArrowLeftRight, group: { pt: 'Backend', en: 'Backend' } },
   // Banco de Dados
+  { label: 'PostgreSQL', icon: Database, group: { pt: 'Banco de Dados', en: 'Database' } },
   { label: 'MySQL', icon: Database, group: { pt: 'Banco de Dados', en: 'Database' } },
   { label: 'NoSQL', icon: Database, group: { pt: 'Banco de Dados', en: 'Database' } },
   // CMS
@@ -65,19 +75,39 @@ const skills = [
   { label: 'Omie', icon: Users, group: { pt: 'Integrações', en: 'Integrations' } },
   // Ferramentas
   { label: 'Git', icon: ArrowLeftRight, group: { pt: 'Ferramentas', en: 'Tools' } },
+  { label: 'Docker', icon: Container, group: { pt: 'Ferramentas', en: 'Tools' } },
+  { label: 'GitHub Actions', icon: Workflow, group: { pt: 'Ferramentas', en: 'Tools' } },
   // IA
-  { label: 'Cursor', icon: Atom, group: { pt: 'IA', en: 'AI' } },
-  { label: 'Claude (Anthropic)', icon: Atom, group: { pt: 'IA', en: 'AI' } },
+  { label: 'Claude Code', icon: Bot, group: { pt: 'IA', en: 'AI' } },
+  { label: 'Cursor', icon: Bot, group: { pt: 'IA', en: 'AI' } },
+  { label: 'Codex', icon: Bot, group: { pt: 'IA', en: 'AI' } },
+  { label: 'Lovable', icon: Sparkles, group: { pt: 'IA', en: 'AI' } },
+  { label: 'Harness Engineering', icon: Workflow, group: { pt: 'IA', en: 'AI' } },
+  { label: { pt: 'Orquestração multiagente', en: 'Multi-agent orchestration' }, icon: Workflow, group: { pt: 'IA', en: 'AI' } },
+  { label: 'MCP', icon: Plug, group: { pt: 'IA', en: 'AI' } },
+  { label: { pt: 'Engenharia de prompt e contexto', en: 'Prompt & context engineering' }, icon: Sparkles, group: { pt: 'IA', en: 'AI' } },
+  { label: { pt: 'Spec-driven + TDD com IA', en: 'Spec-driven + AI-assisted TDD' }, icon: Sparkles, group: { pt: 'IA', en: 'AI' } },
   // Idiomas
   { label: { pt: 'Inglês Intermediário', en: 'Intermediate English' }, icon: BookOpen, group: { pt: 'Idiomas', en: 'Languages' } },
 ]
 
 const portfolioMeta = [
+  {
+    image: '/img/delasnetwork.jpg',
+    tags: ['Laravel', 'React', 'TypeScript', 'PostgreSQL', 'Docker', 'WordPress', 'REST API'],
+    category: 'react',
+    links: [
+      { label: { pt: 'Site', en: 'Website' }, url: 'https://delasnetworkapp.com.br/' },
+      { label: { pt: 'Plataforma de influencers', en: 'Influencer platform' }, url: 'https://painel.delasnetworkapp.com.br/' },
+      { label: { pt: 'Fornecedores', en: 'Suppliers' }, url: 'https://fornecedores.delasnetworkapp.com.br/' },
+    ],
+  },
+  { image: '/img/alucinadosporguitarra.jpg', url: 'https://alucinadosporguitarra.com.br/', tags: ['Next.js', 'Payload CMS', 'TypeScript', 'PostgreSQL', 'Cloudinary'], category: 'react' },
   { image: '/img/superapp.png', url: 'https://superapp.escoladocaos.com/', tags: ['React', 'Node.js', 'Express', 'Firestore', 'Zustand', 'Tailwind', 'REST API'], category: 'react' },
   { image: '/img/pnlplay.png', url: 'https://pnlplay.com.br/home/', tags: ['WordPress', 'PHP', 'PagSeguro', 'DocSign', 'REST API'], category: 'wordpress' },
   { image: '/img/festivalcasamoda.png', url: 'https://festivalcasamoda.com.br/', tags: ['WordPress', 'ACF', 'REST API', 'HubSpot', 'Omie', 'JavaScript'], category: 'wordpress' },
   { image: '/img/casanoivas.png', url: 'https://salaocasanoivas.com.br/', tags: ['WordPress', 'ACF', 'REST API', 'HubSpot', 'Omie', 'JavaScript'], category: 'wordpress' },
-  { image: '/img/escoladocaos.png', url: 'https://escoladocaos.com/', tags: ['WordPress', 'ACF', 'JavaScript'], category: 'wordpress' },
+  { image: '/img/escoladocaos.jpg', url: 'https://escoladocaos.com/', tags: ['React', 'TypeScript', 'Supabase', 'Lovable', 'RD Station', 'Apollo', 'REST API'], category: 'react' },
   { image: '/img/consag.png', url: 'https://consagsa.com.br/', tags: ['WordPress', 'ACF', 'Multilíngue'], category: 'wordpress' },
 ]
 
@@ -183,7 +213,13 @@ export default function Portfolio() {
       <section id="sobre" className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 max-w-6xl mx-auto">
         <div className="absolute top-1/4 right-0 w-[400px] h-[400px] rounded-full opacity-[0.04] blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #00ffe1 0%, transparent 70%)' }} />
 
-        <div className="animate-fade-in">
+        <div className="animate-fade-in relative">
+          <div className="mb-8 lg:mb-0 lg:absolute lg:right-0 lg:top-14 opacity-0" style={{ animationName: 'fade-up', animationDuration: '0.8s', animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+            <div className="relative w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 rounded-full p-[2px]" style={{ background: 'linear-gradient(135deg, #00ffe1, transparent 70%)' }}>
+              <Image src="/img/avatar.jpg" alt="Celso Luiz Ferraz do Amaral" width={256} height={256} className="w-full h-full rounded-full object-cover grayscale-[20%]" unoptimized priority />
+            </div>
+          </div>
+
           <div className="flex items-center gap-3 mb-8 opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
             <div className="h-[1px] w-12 bg-accent opacity-60" />
             <span className="font-mono text-xs tracking-[0.3em] text-accent uppercase">{tr.hero.scrollLabel}</span>
@@ -230,12 +266,15 @@ export default function Portfolio() {
             </span>
           </div>
 
-          <div className="flex gap-3 opacity-0" style={{ animationName: 'fade-up', animationDuration: '0.7s', animationDelay: '0.88s', animationFillMode: 'forwards' }}>
+          <div className="flex flex-wrap gap-3 opacity-0" style={{ animationName: 'fade-up', animationDuration: '0.7s', animationDelay: '0.88s', animationFillMode: 'forwards' }}>
             <a href={contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 border border-border rounded-sm text-xs font-mono text-text-muted hover:border-accent hover:text-accent transition-all duration-200">
               <Github size={14} /><span>GitHub</span>
             </a>
             <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-accent text-bg rounded-sm text-xs font-mono font-medium hover:bg-accent-light transition-all duration-200">
               <Linkedin size={14} /><span>LinkedIn</span>
+            </a>
+            <a href={tr.ui.cvFile} download className="flex items-center gap-2 px-4 py-2 border border-accent rounded-sm text-xs font-mono text-accent hover:bg-accent-dim transition-all duration-200">
+              <Download size={14} /><span>{tr.ui.downloadCv}</span>
             </a>
           </div>
         </div>
@@ -381,6 +420,15 @@ export default function Portfolio() {
                       <div className="flex flex-wrap gap-1 pb-3">
                         {project.tags.map((tag) => (
                           <span key={tag} className="font-mono text-[10px] px-2 py-0.5 border border-border rounded-sm text-text-muted">{tag}</span>
+                        ))}
+                      </div>
+                    )}
+                    {project.links && (
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 pb-3">
+                        {project.links.map((link) => (
+                          <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 font-mono text-[11px] text-accent hover:text-accent-light transition-colors">
+                            <ExternalLink size={10} />{link.label[lang]}
+                          </a>
                         ))}
                       </div>
                     )}
